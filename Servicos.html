@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+    <title>Serviços</title>
+    <meta charset="utf-8"/>
+	<link rel="shortcut icon" type="image/png" href="Imagens/63-512.png"/>
+    
+    <!-- define a viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- captura e define a proporção do documento em relação à largura do display do dispositivo -->
+	<!-- Bootstrap: no modo offline é possível mudar algumas cores e temas. É preferível trabalhar no modo online, porque diminui o tráfego de dados do domínio -->
+    
+    <!-- inserindo css do Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all" /><!-- modo online -->
+	
+	<!-- inserindo css do Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all" /><!-- Banco de ícones para o site -->
+    
+    <!-- inserindo css personalizado -->
+    <link href="CSS/LumiereEstilos.css" rel="stylesheet" media="all" /><!-- dá para trabalhar com o seu próprio CSS -->
+	
+	<!-- Bootstrap parte do princípio de que todo display é divido em 12 colunas, ou seja, a tela é divida em, no máximo, 12 colunas - porém, ele define 4 medidas: para o smartphone(XS); para o tablet(SM); para o desktop(MD); e para os monitores widescreen(LG). Sempre que tivermos a representação para tela de smartphone, usaremos a definição XS, e assim por diante. Essas medidas são precedidas pelo prefixo col, que define a quantidade de colunas - ex.: para smartphone, fica: COL-XS-12, indicando que esse objeto utilizará toda a largura da tela. Se quiser criar uma coluna menor à esquerda para a barra de navegação, por exemplo, havendo barra de navegação e barra de conteúdo, haverá COL-MD-5 para a navegação, por exemplo, e para completar a barra de conteúdo, COL-MD-7. Se extrapolar, o resto do conteúdo ficará quebrado na parte de baixo. -->
+	
+	<!-- Ids da galeria de fotos -->
+	<style>
+	#popup{
+		background: #000000;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	
+	#center{
+		border: 10px solid #121212;
+		margin: 6px auto;
+		width: 750px;
+	}
+	
+	#close{
+		float: right;
+		position: absolute;
+		top: 12%;
+	}
+	</style>
+	
+	<!-- JQuery da galeria -->
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" >
+
+		$(document).ready(function(){
+		$(".thumbnail").click(function(){
+		var address= $(this).attr("src");
+		$("#popup").fadeIn("slow");
+		$("#lightbox").attr("src",address);
+		});
+		$("#close").click(function(){
+		$("#popup").fadeOut("fast");
+		});
+		});
+	</script>​
+	
+</head>
+    
+<body>
+
+<!-- Início da nav -->
+
+<nav id="navbar">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar" style="background-color: #708090;"></span>
+				<span class="icon-bar" style="background-color: #708090;"></span>
+				<span class="icon-bar"style="background-color: #708090;"></span> 
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<a href="lumiere.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+			<a href="lumiere.html"><i class="fa fa-star" aria-hidden="true"></i>A Lumière</a>
+			<a href="servicos.html"><i class="fa fa-camera" aria-hidden="true"></i>Serviços</a>
+			<a href="portfolio.html"><i class="fa fa-leaf" aria-hidden="true"></i>Portfolio</a>
+			<a href="contato.html"><i class="fa fa-tags" aria-hidden="true"></i>Contato</a>
+		</div>
+	</div>
+</nav>
+
+<p class="col-xs-12 logo"><a href="Lumiere.html" style="text-decoration:none;">Lumière Photography</a></p>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="page-header"><!-- cria a linha horizontal abaixo do título em toda a largura do container. É possível mudar a cor da linha -->
+				<h1 style="font-family: Garamond;">Serviços Oferecidos</h1>
+				</div>
+				<p>&nbsp;</p>
+				<figure class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="hvrbox"><a href="#"><img class="img-responsive hvrbox-layer_bottom" src="Imagens/behindthescenesproductphotography.jpg" alt="Foto da empresa"/><div class="hover hvrbox-layer_top hvrbox-layer_slidedown"><div class="hvrbox-text"><p><h1 style="font-family: Garamond;">Photoshoots</h1></p><br/><p style="font: 1.1em Garamond;">Saiba mais</p></div></div></div></a>
+				</figure>
+				<figure class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="hvrbox"><a href="#"><img class="img-responsive hvrbox-layer_bottom" src="Imagens/black-and-white-2598124_1920.jpg" alt="Foto da empresa"/><div class="hover hvrbox-layer_top hvrbox-layer_slidedown"><div class="hvrbox-text"><p><h1 style="font-family: Garamond;">Eventos</h1></p><br/><p style="font: 1.1em Garamond;">Saiba mais</p></div></div></div></a>
+				</figure>
+				<figure class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="hvrbox"><a href="#"><img class="img-responsive hvrbox-layer_bottom" src="Imagens/3-1.jpg" alt="Foto da empresa"/><div class="hover hvrbox-layer_top hvrbox-layer_slidedown"><div class="hvrbox-text"><p><h1 style="font-family: Garamond;">Cursos</h1></p><br/><p style="font: 1.1em Garamond;">Saiba mais</p></div></div></div></a>
+				</figure>
+				<p>&nbsp;</p>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 recuo" style="font: 1.3em goudy old style;">
+					<p>Consolidada no mercado artístico há anos, a <strong>Lumière Photography</strong> se expandiu para além das galerias de arte para se aproximar do público geral, e ajudar a eternizar momentos especiais em sua vida.</p>
+
+					<p>A <strong>Lumière Photography</strong> oferece photoshoots de alta qualidade com fotógrafos renomados no ramo. Os ensaios podem ser realizados em estúdio, ou em local de escolha do cliente. Seja você modelo profissional ou não, nossa equipe está preparada para atendê-lo(a), disponibilizando, inclusive, assessoria de beleza e estilo para aqueles que assim desejarem.</p>
+
+					<p>Além disso, também fotografamos eventos, como casamentos, shows, batizados, nascimentos, festas, tudo para tornar seu momento especial inesquecível. Compartilhe sua alegria com a gente! Entre em contato <a href="contato.html">aqui.</a></p>
+					
+					<p>A <strong>Lumière Photography</strong> também oferece cursos de fotografia e edição de fotos para aqueles que se deixaram cativar pela arte da fotografia. Você, que enxerga a beleza escondida nas coisas simples do dia a dia, você que vê a câmera como a extensão dos seus olhos e da sua sensibilidade, venha aprender ou aprimorar sua técnica com a gente! Turmas regulares começando a cada semestre, para diversos níveis, do iniciante ao avançado.</p>
+					
+					<p style="text-align:center;">Venha eternizar seu momento com a <strong>Lumière</strong>.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
+<br/>
+
+<footer>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<p><h3>Lumière Photography</h3></p>
+		</br/>
+			<strong>Estúdio:</strong> Rua Anita Garibaldi, 707 Joinville - Santa Catarina/SC<br/>
+			Tel.: (47)3421-5920<br/>
+			E-mail: contato@lumiere.com.br
+			<br/>
+			<br/>
+			© 2019 - Lumière Photography - Todos os direitos rervados.<br/>
+			<br/>
+			<a href="#"><i class="fa fa-twitter" style="color: #FFFFFF;" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-instagram" style="color: #FFFFFF;" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-facebook" style="color: #FFFFFF;" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-snapchat-ghost" style="color: #FFFFFF;" aria-hidden="true"></i></a>
+		</div>
+	</div>
+</footer>
+
+
+
+	<!--  JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- inserindo Java do Bootstrap -->
+	<!-- Última versão Java compilada e minificada -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	
+</body>
+</html>

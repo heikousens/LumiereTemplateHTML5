@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+    <title>Contato</title>
+    <meta charset="utf-8"/>
+	<link rel="shortcut icon" type="image/png" href="Imagens/63-512.png"/>
+    
+    <!-- define a viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- captura e define a proporção do documento em relação à largura do display do dispositivo -->
+	<!-- Bootstrap: no modo offline é possível mudar algumas cores e temas. É preferível trabalhar no modo online, porque diminui o tráfego de dados do domínio -->
+    
+    <!-- inserindo css do Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all" /><!-- modo online -->
+	
+	<!-- inserindo css do Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all" /><!-- Banco de ícones para o site -->
+    
+    <!-- inserindo css personalizado -->
+    <link href="CSS/LumiereEstilos.css" rel="stylesheet" media="all" /><!-- dá para trabalhar com o seu próprio CSS -->
+	
+	<!-- Bootstrap parte do princípio de que todo display é divido em 12 colunas, ou seja, a tela é divida em, no máximo, 12 colunas - porém, ele define 4 medidas: para o smartphone(XS); para o tablet(SM); para o desktop(MD); e para os monitores widescreen(LG). Sempre que tivermos a representação para tela de smartphone, usaremos a definição XS, e assim por diante. Essas medidas são precedidas pelo prefixo col, que define a quantidade de colunas - ex.: para smartphone, fica: COL-XS-12, indicando que esse objeto utilizará toda a largura da tela. Se quiser criar uma coluna menor à esquerda para a barra de navegação, por exemplo, havendo barra de navegação e barra de conteúdo, haverá COL-MD-5 para a navegação, por exemplo, e para completar a barra de conteúdo, COL-MD-7. Se extrapolar, o resto do conteúdo ficará quebrado na parte de baixo. -->
+	
+	<!-- Ids da galeria de fotos -->
+	<style>
+	#popup{
+		background: #000000;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	
+	#center{
+		border: 10px solid #121212;
+		margin: 6px auto;
+		width: 750px;
+	}
+	
+	#close{
+		float: right;
+		position: absolute;
+		top: 12%;
+	}
+	</style>
+	
+	<script type="text/javascript" src="js/jquery.js">
+	</script>
+	<script type="text/javascript">
+		function muda(obj){ 
+			var i = obj.selectedIndex; 
+			var j = obj.options[i].value; 
+			if (j == 'visita') { 
+			document.getElementById('visita').style.display="block";
+			}
+			}
+			
+	</script>​
+	
+</head>
+    
+<body>
+
+<!-- Início da nav -->
+
+<nav id="navbar">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar" style="background-color: #708090;"></span>
+				<span class="icon-bar" style="background-color: #708090;"></span>
+				<span class="icon-bar"style="background-color: #708090;"></span> 
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<a href="lumiere.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+			<a href="lumiere.html"><i class="fa fa-star" aria-hidden="true"></i>A Lumière</a>
+			<a href="servicos.html"><i class="fa fa-camera" aria-hidden="true"></i>Serviços</a>
+			<a href="portfolio.html"><i class="fa fa-leaf" aria-hidden="true"></i>Portfolio</a>
+			<a href="contato.html"><i class="fa fa-tags" aria-hidden="true"></i>Contato</a>
+		</div>
+	</div>
+</nav>
+
+<p class="col-xs-12 logo"><a href="Lumiere.html" style="text-decoration:none;">Lumière Photography</a></p>
+
+<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="page-header">
+					<h1 style="font-family: Garamond;">Fale Conosco</h1>
+				</div>
+				
+				<div class="col-xs-12">
+					<form class="form-horizontal" action="mandaForm.php" method="post">
+						<div class="form-group">
+							<label for="nome" class="col-xs-2 control-label" style="font: 1.2em Garamond; font-weight: bold;">Nome Completo:</label>
+							<div class="col-xs-10">
+								<input type="text" class="form-control" id="nome"/>
+							</div>
+						</div>
+						<p>&nbsp;</p><!-- Um espaço em branco, força a criação de um parágrafo -->
+						<div class="form-group">
+							<label for="email" class="col-xs-2 control-label" style="font: 1.2em Garamond; font-weight: bold;">Email:</label>
+							<div class="col-xs-10">
+								<input type="text" class="form-control" id="email"/>
+							</div>
+						</div>
+						<p>&nbsp;</p><!-- Um espaço em branco, força a criação de um parágrafo -->
+						<div class="form-group">
+							<label for="assunto" class="col-xs-2 control-label" style="font: 1.2em Garamond; font-weight: bold;">Assunto:</label>
+							<div class="col-xs-10">
+								<select class="form-control" id="assunto">
+									<option></option>
+									<option style="font: 1.2em Garamond;">Elogio</option>
+									<option style="font: 1.2em Garamond;">Reclamação</option>
+									<option style="font: 1.2em Garamond;">Dúvida</option>
+									<option style="font: 1.2em Garamond;">Sugestão</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group" id="servico">
+							<label for="tipo" class="col-xs-2 control-label" style="font: 1.2em Garamond; font-weight: bold;">Gostaria de falar sobre um serviço específico?</label>
+							<div class="col-xs-10">
+								<label class="radio-inline control-label">
+									<input type="radio" name="servico" id="servico" value="Sim" style="font: 1.2em Garamond; font-weight: bold;">Sim
+								</label>
+								<label class="radio-inline control-label">
+									<input type="radio" name="servico" id="servico" value="Não" style="font: 1.2em Garamond; font-weight: bold;">Não
+								</label>
+							</div>
+						</div>
+						<div class="form-group" id="assunto">
+							<label for="assunto" class="col-xs-2 control-label" style="font: 1.2em Garamond; font-weight: bold;">Selecione o serviço de seu interesse:</label>
+							<div class="col-xs-10">
+								<select class="form-control" id="assunto" name="select" onchange="muda(this);">
+									<option></option>
+									<option style="font: 1.2em Garamond;">Photoshoot</option>
+									<option style="font: 1.2em Garamond;">Cobertura de Evento</option>
+									<option style="font: 1.2em Garamond;">Curso</option>
+									<option value="visita" style="font: 1.2em Garamond;">Visita ao Estúdio</option>
+								</select>
+								<div id="visita" style="display: none;"><p style="font: 1.2em Garamond;">Atenção: Visitas ao estúdio devem ser agendadas com antecedência.</p></div> 
+							</div>
+						</div>
+						<p>&nbsp;</p><!-- Um espaço em branco, força a criação de um parágrafo -->
+						<div class="form-group">
+							<label for="mensagem" class="col-xs-2 control-label" style="font: 1.2em Garamond; font-weight: bold;">Mensagem:</label>
+							<div class="col-xs-10">
+								<textarea class="form-control" rows="8" style="resize:none;"></textarea>
+							</div>
+						</div>
+						
+						<p>&nbsp;</p><!-- Um espaço em branco, força a criação de um parágrafo -->
+						<div class="form-group">
+							<div class="col-xs-offset-2 col-xs-2"><!-- A classe col-xs-offset-2 faz com que o conteúdo da div mude as 2 primerias colunas, pulando 2 e iniciando a partir da terceira -->
+								<button type="submit" class="btn btn-info">Enviar Mensagem</button>
+							</div>
+							<div>
+								<button type="reset" class="btn btn-muted">Limpar</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<br/>
+<br/>
+
+<footer>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<p><h3>Lumière Photography</h3></p>
+		</br/>
+			<strong>Estúdio:</strong> Rua Anita Garibaldi, 707 Joinville - Santa Catarina/SC<br/>
+			Tel.: (47)3421-5920<br/>
+			E-mail: contato@lumiere.com.br
+			<br/>
+			<br/>
+			© 2019 - Lumière Photography - Todos os direitos rervados.<br/>
+			<br/>
+			<a href="#"><i class="fa fa-twitter" style="color: #FFFFFF;" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-instagram" style="color: #FFFFFF;" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-facebook" style="color: #FFFFFF;" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-snapchat-ghost" style="color: #FFFFFF;" aria-hidden="true"></i></a>
+		</div>
+	</div>
+</footer>
+
+
+
+	<!--  JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	
+	<!-- inserindo Java do Bootstrap -->
+	<!-- Última versão Java compilada e minificada -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	
+</body>
+</html>
